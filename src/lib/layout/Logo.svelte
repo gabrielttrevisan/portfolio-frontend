@@ -1,5 +1,5 @@
 <template type="text/pug">
-    div.wrapper(role="image")
+    div.wrapper(role="img")
         span.name gabriel
         span.dot
         span.tr tr
@@ -8,9 +8,11 @@
 
 <style type="text/stylus">
     @keyframes pulsate
-        from
+        0%
             opacity 0.55
-        to
+        90%
+            opacity 0.45
+        100%
             opacity 0.12
 
     div.wrapper
@@ -18,6 +20,10 @@
         align-items center
         justify-content flex-start
         column-gap 0.3125rem
+        user-select none
+
+        *
+            user-select none
 
         .name
             font-weight 500
